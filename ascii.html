@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- 
+        
+       MADE BY RAMADAN
+    
+       
+    -->
+    
+    <!-- Fontawesome Icons-->
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+  <!-- Google fonts -->
+ 
+        <link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+        <title>ASCII Converter</title>
+        <style>
+            *{
+    box-sizing:border-box;
+    outline:none;
+}
+/*
+        
+       MADE BY RAMADAN
+       
+    */
+body {
+    text-align:center;
+    text-align: -webkit-center;
+    margin:0;
+    color:#555;
+    font-family: 'Space Mono';
+}
+#slant{
+ /*  transform: perspective(400px) rotateY(240deg);*/
+    height:100vh;
+    width: 100vw;    
+    background-color: dodgerblue;
+    background-image: url(https://i.ibb.co/VxTLSP1/sm.jpg);
+    background-attachment: fixed;
+    background-position: center  top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#slantBody{
+    position:relative;    
+    z-index:2;
+    color:#fff;
+    font-size:30px;
+    text-align:center;
+    text-align: -webkit-center;
+}
+@-webkit-keyframes change {
+  0% {
+   top: -50px;
+}
+50% {
+    top: -60px;
+}
+100%{
+    top: -50px;
+}
+}
+
+@keyframes change { 
+  0% {
+   top: -50px;
+}
+50% {
+    top: -60px;
+}
+100%{
+    top: -50px;
+}
+}
+
+button{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    border: none;
+    background-color: #fff;
+    color: #555;
+    padding: 10px 12px;
+    Border-radius: 50px;
+    margin: 1px;
+    border: 1px solid rgba(0,0,0,0);
+    transition: 0.0s;   
+    height:50px;
+    width:50px;
+    font-size: 15px;
+}
+button:active{
+    background-color: #59adf7;
+    border: 0px solid #fff;
+    box-shadow: 0px 0px 0px;
+    color: #fff!important;
+}
+#s1,#s2,#s3,#s4,#s5{
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 00%;
+    z-index:2;
+    background-color: #fff;
+    
+    padding:0px;
+    transition: 1s  cubic-bezier(1, -0.06, 0.26, 1.06);
+    overflow:auto;
+}
+@-webkit-keyframes show {
+  0% {
+   height:0;
+}
+
+100%{
+    height:100%;
+}
+}
+
+@keyframes show { 
+   0% {
+   height:0;
+}
+
+100%{
+    height:100%;
+}
+}
+
+#tn i{
+    float: right;
+    color: #777;
+    background-color: #ddd;
+    padding: 0px;   
+    
+}
+#tn{
+  overflow: hidden;
+  background-color: dodgerblue;
+  position: fixed;
+  top:-300px;
+  left:0;
+  width:100%;
+  transition: 1s;
+  z-index: 3;
+}
+#tn span{
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 10px;
+}
+#tn i{
+    float: right;
+  color: #555;
+  text-align: center;
+  padding: 17px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  background-color: #ddd;
+  height:100%;  
+}
+section p{
+    font-size: 15px;
+    background-color: dodgerblue;
+    padding: 10px;
+    color: #fff;
+    width: 90%;
+    border-radius:4px;
+}
+#label{
+    font-weight: bold;
+}
+a{
+     color: #fff!important;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  background-color: tomato;
+  width: auto;
+  font-family: "Ubuntu";
+  margin-top: 5px;
+  Border-radius: 1px;
+  width: 200px;
+  
+}
+input{
+    background-color: #ddd;
+    border-radius: 50px;
+    border: none;
+    padding:7px;
+    transition: .3s;
+    color: #555;
+    padding-left: 30px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png)  ;
+    background-position:center left 10px;
+    opacity: 0.5;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+input:focus{
+    box-shadow: 1px 1px 10px 2px tomato;
+    background-color: #fff;
+}
+hr{
+    border: 3px solid #bbb;
+    width: 200px;
+    Border-radius: 1px;
+    animation: fade 2s infinite ;
+    
+}
+ @-webkit-keyframes fade {
+   0% {
+   opacity: 1;
+   
+}
+
+
+
+50% {
+   opacity:0.3;
+   
+}
+100%{
+   opacity: 1;
+   
+}
+}
+
+@keyframes fade { 
+  0% {
+   opacity: 1;
+   
+}
+
+
+
+50% {
+   opacity:0.3;
+   
+}
+100%{
+   opacity: 1;
+   
+}
+}
+button:hover{
+    transform: scale(1.1);
+}
+#overly{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 70%;    
+    transition:1.1s;
+    background-color: rgba(0,0,0,0.7);
+    padding:0px;
+    z-index:5;
+    overflow:auto;
+    text-align:center;
+    padding:10px;
+     animation: animate2 1.5s cubic-bezier(1, -0.06, 0.26, 1.06) ;
+  -webkit-animation: animate2 1.5s cubic-bezier(1, -0.06, 0.26, 1.06) ;
+}
+#overly p{
+    color:#fff;
+    font-size:30px;
+}
+#overly div{
+position: relative;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+}
+#overly button{
+    background-color: #59adf7;
+    padding: 7px 15px;
+    height: auto;
+    width: auto;
+    border-radius: 3px;
+    color: #fff;
+}
+#bottom{
+    position: fixed;
+    bottom: 10px;
+    left:10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px;
+    display:none;
+    animation: 1.1s cubic-bezier(1, -0.06, 0.26, 1.06) showup;
+}
+ @-webkit-keyframes showup {
+   0% {
+   bottom : -100px;
+   
+}
+100%{
+   bottom: 10px;
+   
+}
+}
+@keyframes showup { 
+   0% {
+   bottom : -100px;
+   
+}
+100%{
+   bottom: 10px;
+   
+}
+}
+.bar{
+    padding: 5px;
+    width: 100px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    transition: 1s opacity;    
+    bottom : 50px;
+    position: fixed;
+    left: 50%;
+    background-color: rgba(255,255,255,.7);
+    transition: 1s cubic-bezier(1, -0.06, 0.26, 1.06);
+}
+#output{
+    padding: 10px;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.35);
+    width: 80%;
+    border-radius: 3px;
+}
+@media screen and (min-width: 600px) {
+ #output{
+    width: 50%!important;
+  }
+  #bottom{
+      left: 100px;
+      right: 100px;
+  }
+  section p{
+          width: 50%;
+  }
+  #about{
+      width: 50%!important;
+  }
+}
+@-webkit-keyframes animate2 {
+  0% {
+opacity:0;
+   height:00%;
+}
+
+100% {
+opacity:1;
+    height: 70%;
+}
+}
+
+@keyframes animate2 { 
+   0% {
+opacity:0;
+   height:00%;
+}
+
+100% {
+opacity:1;
+    height: 70%;
+}
+}
+        </style>
+    </head>
+    <body onload="setd()">
+        <div id="slant"><br>
+            <div id="slantBody">
+                <h1 style="margin:5px">ASCII</h1><b>Converter</b>
+                <br>
+                <p id="output"></p>
+            </div>
+            <div id="bottom">
+                <button onclick="show(1)" id="b1">
+                <i class="far fa-keyboard" style="color: #555;font-size: 15px"></i>                    
+                </button>
+                
+                <button onclick="show(2)" id="b2"> <i style="font-size:15px" class="far fa-question-circle"></i></button>
+                
+                <button onclick="show(3)" id="b3"><i style="color: #555;font-size: 15px" class="fas fa-pencil-alt"></i></button>
+                
+                <button onclick="show(4)" id="b4">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button onclick="show(5)" id="b5">
+                     <i style="padding: 0px 0px" class="fas fa-code"></i>
+                </button>
+            </div>
+            <div id="close"></div>
+            <div id="main">
+                <section id="s1">
+                   <br><br><br>
+                    Convert To ASCII<hr><br>
+                        
+                    <p style="background-color: #eee;color: #555">Enter string in input box below</p><br>
+                    <input id="mainp"                   oninput="Convert.ToASCII(this.value)" /><br><br>
+                    <p id="out">Output appears here...</p>
+                </section>
+                
+                <section id="s2">
+                 <br><br><br>
+                What is ASCII?
+                <hr><br>
+                <p>
+                <b>ASCII</b> abbreviated from American Standard Code for Information Interchange, is a character encoding standard for electronic communication.  
+                </p>       <br><br><br>         
+                </section>
+                
+                <section id="s3">
+                 <br><br><br>
+                 Example<hr><br>
+                 <p style="background-color: #eee;color: #555">Click on the examples below to convert</p>
+                 <p style="text-align:left;" onclick="cvt('abc')">
+               <b>Input</b>: "abc" 
+<br>                    
+<b>Output</b>: 97 98 99
+
+</p><p style="text-align:left" onclick="cvt('xyz')">
+<b>Input</b>: "xyz"
+<br>
+<b>Output</b>: 120 121 122
+                 </p>
+                 <br><br><br>
+                </section>
+                
+               
+                 <section id="s5">
+                    <br><br><br>
+                   
+                   Creator<hr><br>
+                    <a id="about" href="https://www.facebook.com/devsadiq.suraj" style="width: 80%">
+                   
+                       This Code Is Made By SURAJ ABUBAKAR RAMADAN<br><br>&copy; Dev Ramadan 2020
+                   </a>
+                       
+                   <br><br><br>
+                </section>
+            </div>
+        </div>
+        <div class="bar" onclick="showBot()" id="bar1"></div>
+         <div id="tn">
+                      <span id="label">
+                      ASCII Converter
+                       </span>  
+                        <i class="fas fa-times" onclick="hideall()"></i>
+                        
+                   </div>     
+              <div id="overly">
+             
+            
+                <p id="ct">ASCII Conveter</p>
+                <p id="ct1" style="font-size:15px"> Click on the bar below to open/close options</p><br>
+                <p id="ct2" style="font-size:5px"></p>
+            <br>
+            <button onclick="skip()">Ok</button>
+           <button onclick="showBot()">Options</button>
+           </div>
+           
+            
+       <script>
+           "use strict";
+/*
+        
+       MADE BY RAMADAN
+        
+    */
+function cvt(vv){
+    JS("mainp").val(vv);
+    var val = Convert.ToASCII(vv);  
+    hideall();
+    show(1);
+}
+var JS = function(e){
+   var ele = document.getElementById(e);
+   
+   function show(){
+     ele.style.display="block";
+   }
+   function hide(){
+     ele.style.display="none";
+   }
+   function $get(){
+       return ele;
+   }
+   function $set(val){
+       ele.innerHTML=val;
+   }
+   function val(vv){
+       return ele.value=vv;
+   }
+   return {
+      show:show,
+      hide:hide,
+      $get:$get,
+      $set:$set,
+      val:val
+   }
+}
+var txt =["Home","Convert To ASCII","What is ASCII","Example","More Codes","Creator"];
+function show(n){ 
+  //JS("bottom").hide();  
+  //JS("slantBody").hide();
+  //JS("s"+n).show();    
+    JS("s"+n).$get().style.height="100%";    
+    JS("tn").$get().style.top=0;
+    JS("label").$set(txt[n]);
+}
+var Convert = {
+    ToASCII: function(str){
+        str = String(str||"");
+        JS("out").$set("");
+        for(var l of str){
+            JS("out").$get().innerHTML+= (l.charCodeAt(0)+" ");
+        }
+    }
+}
+function hideall(){
+    JS("bottom").show();
+    JS("tn").$get().style.top="-300px";
+    JS("label").$set(txt[0]);
+    for(var i =1;i<=5;i++)
+       JS("s"+i).$get().style.height=0;
+}
+function skip(){
+    JS("overly").hide();
+}
+var ctns = [
+  []
+];
+var shownb = false ;
+function showBot(){
+if(!shownb){
+    JS("bottom").$get().style.display="block";
+    JS("bar1").$get().style.bottom="120px";
+    shownb= true;
+    }else{
+        JS("bottom").$get().style.display="none";
+    JS("bar1").$get().style.bottom="50px";
+    shownb= false ;
+    }
+}
+var day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+var month=["January","Feburary","March","April","May","June","July","August","September","October","November","December"];  
+
+var hours = ['12','01','02','03','04','05','06','07','08','09','10','11','12','01','02','03','04','05','06','07','08','09','10','11','12'];
+
+var sec = ['00','01','02','03','04','05','06','07','08','09'];
+var min = ['00','01','02','03','04','05','06','07','08','09'];
+function setd(){
+var d = new Date();
+
+function getMin(){
+    var sc = min[d.getMinutes ()];
+    if(sc=="undefined"||sc==undefined){
+        return d.getMinutes();
+    }else{
+        return sc;
+        
+    }
+}
+function getSec(){
+    var cc =sec[d.getSeconds()];
+    if(cc=="undefined"||cc==undefined){
+        return d.getSeconds();
+    }else{
+        return cc;
+        
+    }
+}
+//function to show AM/PM
+function getAmPm(){
+    var hrs= d.getHours();
+    if(hrs>=12){
+        return "PM";
+    }
+    else if(hrs==0){
+        return "AM";
+    }
+    else{
+        return "AM";
+    }
+}
+
+//Main clock
+ document.getElementById("output").innerHTML =
+  hours[d.getHours()]
+  +':'
+  +getMin()
+  +':'
+  +getSec()
+  +'<span style=font-size:15px>'
+  +getAmPm()
+  +'</span>'
+  +'<br><div>'
+/* next line */
+  +day[d.getDay()]
+  +', '
+  +
+  +d.getDate()
+  + ' ' 
+  +month[d.getMonth()]
+  +' '
+  +d.getFullYear()
+  +'</div>';
+ 
+//refresh date after every 1 sec
+
+setTimeout(setd,1000);
+
+}       </script>
+      
+    </body>
+</html>
